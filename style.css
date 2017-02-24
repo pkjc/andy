@@ -1,0 +1,792 @@
+@charset "UTF-8";
+/*---------------------------------------------------------------------------------
+
+	Theme Name: Andy
+	Template: rams
+	Text Domain: andy
+	Theme URI: http://pankaj.co/andy-wordpress-theme/
+	Version: 0.5
+	Description: Andy is a child theme for Rams wordpress theme (http://www.andersnoren.se/themes/rams/) by Anders Norén (http://www.andersnoren.se/). It is a clean, minimalist and responsive theme for bloggers. Features responsive and retina-ready design, support for the gallery and quote post formats, custom accent color support, Jetpack infinite scroll integration, editor styles and translation ready code. 
+	Tags: blog, two-columns, left-sidebar, custom-colors, custom-menu, editor-style, featured-images, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+	Author: Pankaj Chobharkar
+	Author URI: http://pankaj.co
+	License: GNU General Public License version 2.0
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	
+	All files, unless otherwise stated, are released under the GNU General Public License
+	version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+-----------------------------------------------------------------------------------
+
+/* -------------------------------------------------------------------------------- */
+/*	1. Document setup
+/* -------------------------------------------------------------------------------- */
+
+body {
+   	margin: 0;
+	padding: 0;
+	border: none;
+	color: #333;
+	background: #fff;
+	font-family: Lato, sans-serif;
+	font-size: 18px;
+	-webkit-text-size-adjust: 100%;
+	position: relative;
+	height:100%;
+}
+body a {
+    text-decoration: underline;
+}
+/* Transitions --------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/*	2.	Structure
+/* -------------------------------------------------------------------------------- */
+
+.sidebar {
+    width: 280px;
+    padding: 7.4% 40px 7% 40px;
+    background-image: url(images/newsletter.jpg) !important;
+    background-position: 96% 98% !important;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.13), 0 1px 10px 0 rgba(0, 0, 0, 0.11), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+/* .single-post .sidebar, .archive .sidebar {padding: 7.45% 40px 7% 40px;} */
+
+.page .sidebar {padding-top: 7.35%}
+
+.home .sidebar {padding-top: 7.4%}
+
+.wrapper {margin: 6.45% 0 6% 380px;}
+
+.wrapper-inner {
+    width: 620px;
+    max-width: 80%;
+    margin: 0;
+    height:100%;
+}
+/* Sections --------------------------------------- */
+
+.bg-mint {
+    background: #eee;
+}
+/* Gridiriffic --------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/*	3.	Header
+/* -------------------------------------------------------------------------------- */
+
+.blog-title {
+    font-size: 1.25em;
+    line-height: 1;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 50px;
+    letter-spacing: 0.01em;
+}
+.blog-title:after {
+   content: "";
+	display: none;
+	width: 100%;
+	height: 2px;
+	margin: 30px 0;
+	background: #fff;
+	background: rgba( 255, 255, 255, 0.2 );
+}
+.blog-title a {
+    text-decoration: none; 
+    color: #6AA897;
+}
+.blog-title a:hover {
+    color: #333;
+}
+/* Main menu --------------------------------------- */
+
+
+.main-menu li {
+	position: relative;
+	text-align: left;
+	margin-top: 25px;
+}
+
+.main-menu > li:first-child { margin-top: 0; }
+
+.main-menu .sub-menu {margin-right: 0px;}
+
+.main-menu a {
+	display: block;
+	font-size: 1em;
+	font-weight: normal;
+	color: #333;
+	text-decoration:none;
+}
+
+.main-menu a:hover,
+.main-menu .current_menu_item > a,
+.main-menu .current_page_item > a {
+    	display: inline;
+ 	color: #26a885;
+}
+.main-menu .current_menu_item > a, .main-menu .current_page_item > a {
+	text-decoration:none;
+}
+.main-menu .current_page_item:after {
+    content: "\02192";
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 19px;
+    color: #26a885;
+    font-weight: 800;
+    z-index: 1000;
+    font-family: sans-serif;
+}
+/* Credits --------------------------------------- */
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: #efefef;
+    padding: 20px;
+    z-index: 0;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.9), 0 1px 10px 0 rgba(0, 0, 0, 0.35), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+    display:none;
+}
+p.credits1 {
+    text-align: center;
+}
+
+.credits {
+    font-size: 0.8em;
+    color: #555;
+    position: absolute;
+    bottom: 6%;
+    left: 45px;
+    display: block;
+}
+.credits a {
+    color: #555; */
+}
+.credits a:hover {
+    color: #6AA897;
+}
+/* -------------------------------------------------------------------------------- */
+/*	4.	Blog
+/* -------------------------------------------------------------------------------- */
+
+.post,
+.posts .page,
+.single-attachment .attachment {
+    /* background: #fff; */
+}
+.posts .post,
+.posts .page {
+    margin-bottom: 5.5%;
+    border-bottom: 4px solid #eee;
+    padding-bottom: 7.5%;
+}
+.post-inner {
+    padding: 0;
+}
+/* Featured media --------------------------------------- */
+
+.featured-media img {
+  display: block;
+    margin-bottom: 35px;
+    width: 100%;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 1px 10px 0 rgba(0, 0, 0, 0.14), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+    opacity: 0.9;
+    margin-top: 30px;
+}
+.format-standard .featured-media a:hover img {
+    opacity: 1;
+    box-shadow: none;
+}
+/* Post header --------------------------------------- */
+
+.post-header {
+    margin-bottom: 22px;
+}
+.post-date {
+    font-size: 0.9em;
+    font-weight: normal;
+    margin-bottom: 0;
+    color: #999;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+.post-date a {
+    color: #999;
+    text-decoration: none;
+}
+.post-date a:hover {
+    color: #666;
+}
+.post-title {
+    font-size: 2em;
+    line-height: 125%;
+    font-weight: normal;
+    letter-spacing: 0.01em;
+    word-break: break-word;
+    -ms-word-break: break-word;
+    text-transform: capitalize;
+}
+.post-title a {
+    color: #444;
+    text-decoration: none;
+}
+.post-content a.more-link {
+    padding: 0;
+    border: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
+}
+.post-content a.more-link:hover {
+    color: #6AA897;
+}
+.post-meta {
+    margin-top: 2em;
+    color: #666;
+}
+.post-meta p {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+/* -------------------------------------------------------------------------------- */
+/*	5.	Post formats
+/* -------------------------------------------------------------------------------- */
+/* Format gallery --------------------------------------- */
+/* Format quote --------------------------------------- */
+
+.post-quote blockquote,
+.post-quote blockquote p {
+    padding: 3%;
+}
+/* -------------------------------------------------------------------------------- */
+/*	6.	Single post
+/* -------------------------------------------------------------------------------- */
+/* Post meta --------------------------------------- */
+
+.post-meta-toggle {
+    margin-top: 6%;
+}
+/* Post navigation --------------------------------------- */
+
+.post-nav {
+    padding-top: 25px;
+    border-top: 4px solid #eee;
+    margin-top: 25px;
+}
+/* -------------------------------------------------------------------------------- */
+/*	7.	Post content
+/* -------------------------------------------------------------------------------- */
+
+.home .page .post-content {
+    font-size: 20px;
+}
+
+.post-content {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    color: #333;
+}
+.post-content a {border-bottom:none} 
+.post-content a:hover {text-decoration:none} 
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    font-weight: normal;
+}
+
+.post-content h1 { font-size: 1.75em; }
+.post-content h2 { font-size: 1.55em; }
+.post-content h3 { font-size: 1.35em; }
+
+/* Post media --------------------------------------- */
+/* jetpack tiled gallery */
+/* Tables --------------------------------------- */
+/* Forms --------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/*	8.	Comments
+/* -------------------------------------------------------------------------------- */
+
+.comments,
+.comment-respond {
+    padding: 0;
+}
+/* Comment --------------------------------------- */
+/* comment header */
+/* comment content */
+/* comment actions */
+/* Comment navigation --------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/*	9.	Respond
+/* -------------------------------------------------------------------------------- */
+/* no comments */
+/* Comment form --------------------------------------- */
+
+.comment-form input[type="submit"] {
+    font-family: sans-serif;
+}
+/* -------------------------------------------------------------------------------- */
+/*	10.	Pagination
+/* -------------------------------------------------------------------------------- */
+/* Archive navigation --------------------------------------- */
+/* Jetpack infinite scroll --------------------------------------- */
+/* Page title --------------------------------------- */
+
+.page-title {
+    margin-bottom: 28px;
+    border-bottom: 4px solid #eee;
+    padding: 15px 0 15px 0;
+    margin-top: -3.2%;
+}
+.page-title h4 {
+    text-align: left;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+}
+/* -------------------------------------------------------------------------------- */
+/*	11.	Responsive
+/* -------------------------------------------------------------------------------- */
+
+
+@media (max-width: 1100px) {
+
+	/* structure */
+	
+	.sidebar {
+		width: 250px;
+		padding: 7.4% 25px;
+	}
+	
+	.wrapper { margin-left: 300px; }
+
+}
+
+
+@media (max-width: 930px) {
+	
+	
+	/* structure */
+	
+	.sidebar {
+		width: 100%;
+		padding: 30px 0;
+		position: relative;
+		top: auto;
+		right: auto;
+		bottom: auto;
+	}
+	
+	.sidebar-inner {
+		width: auto;
+		max-width: 86%;
+		margin: 0 auto;
+	}
+	
+	.wrapper-inner {
+		max-width: none;
+		margin: 0;
+		width: auto;
+	}
+	
+	.wrapper { margin: 7%; }
+	
+	
+	/* header */
+	
+	
+	.blog-title { 
+		margin-right: 100px; 
+		text-align: left;
+		margin-bottom: 10px;
+	}
+	
+	.blog-title:after,
+	.main-menu,
+	.credits { display: none; }
+	
+	
+	/* navigation */
+	
+	.nav-toggle {
+		display: block;
+		position: absolute;
+		right: 7%;
+		top: 45%;
+		margin-top: -5px;
+	}
+	
+	.nav-toggle .bars {
+		height: 10px;
+		width: 15px;
+		float: right;
+		position: relative;
+	}
+	
+	.nav-toggle .bar {
+		width: 15px;
+		height: 2px;
+		background: #333;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	
+	.nav-toggle .bar:nth-child(2) { top: 4px; }
+	.nav-toggle .bar:nth-child(3) { top: 8px; }
+	
+	.nav-toggle p {
+		font-size: 14px;
+		line-height: 10px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: right;
+		color: #fff;
+		float: right;
+		margin-right: 8px;
+	}
+	
+	.nav-toggle .close { display: none; }
+	
+	.nav-toggle:hover { cursor: pointer; }
+	
+	
+	/* active state */
+	
+	
+	.nav-toggle.active .bar:nth-child(1),
+	.nav-toggle.active .bar:nth-child(3) { top: 4px; }
+	
+	.nav-toggle.active .bar:nth-child(2) { 
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);
+		opacity: 0; 
+	}
+	
+	.nav-toggle.active .bar:nth-child(1) {
+		-webkit-transform: rotate(45deg); 
+		-moz-transform: rotate(45deg);  
+		-ms-transform: rotate(45deg);  
+		-o-transform: rotate(45deg);  
+		transform: rotate(45deg); 
+	}
+	
+	.nav-toggle.active .bar:nth-child(3) { 
+		-webkit-transform: rotate(-45deg); 
+		-moz-transform: rotate(-45deg);  
+		-ms-transform: rotate(-45deg);  
+		-o-transform: rotate(-45deg);  
+		transform: rotate(-45deg); 
+	}
+	
+	.nav-toggle.active .menu { display: none; }
+	.nav-toggle.active .close { display: block; }
+
+	
+	/* mobile menu */
+	
+	.mobile-menu { padding: 40px 7%; }
+	
+	.mobile-menu li { margin-top: 25px; }
+	.mobile-menu > li:first-child { margin-top: 0; }
+	
+	.mobile-menu .sub-menu { margin-left: 25px; }
+	
+	.mobile-menu a {
+		display: block;
+		font-size: 16px;
+		font-weight: 700;
+		color: #bbb;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	
+	.mobile-menu a:hover { color: #fff; }
+	
+	
+}
+@media (max-width: 768px) {
+	footer {
+    		display:block;
+	}
+}
+
+@media (max-width: 700px) {
+
+	.home .sidebar {padding: 7.4% 40px 7% 2px;}
+
+	.blog .sidebar, .single-post .sidebar, .archive .sidebar {padding: 7.45% 40px 7% 2px;}
+
+	.blog-title {
+    		margin-bottom: 6px;
+	}
+	/* structure */
+	
+	.wrapper,
+	.wrapper-inner { 
+		margin: 0; 
+		max-width: none;
+		width: auto;
+	}
+		
+	/* header */
+	
+	.sidebar { padding: 25px 0; }
+	
+	.sidebar-inner {max-width: 90%;}
+	
+	/* navigation */
+	
+	.nav-toggle { right: 5%; }
+	
+	.mobile-menu { padding: 35px 5%; }
+	
+	.mobile-menu a { font-size: 14px; }
+
+	/* blog */
+	
+	.post-header { margin-bottom: 30px; }
+	
+	.posts .post,
+	.posts .page { margin-bottom: 0; }
+	
+	.post + .post { border-top: 1px solid #eee; }
+		
+	.post-inner,
+	.archive-nav { padding: 40px 5%; }
+	
+	.page-links { padding: 0 5%; }
+	
+	.page-links > span,
+	.page-links > a {
+		padding: 15px 20px;
+	}
+	
+	/* single post */
+	
+	.post-meta-inner { padding: 40px 5%; }
+	
+	/* comments */
+	
+	.comments-title-container { 
+		padding: 35px 5%; 
+		margin: 0;
+		background: #fff;
+		border-bottom: 2px solid #eee;
+	}
+	
+	.comments-subtitle { 
+		bottom: 37px; 
+		right: 5%;
+	}
+	
+	.comments,
+	.comment-respond {
+		padding: 40px 5%;
+	}
+	
+	.comment-respond {
+		margin-top: 0;
+		border-top: 2px solid #eee;
+	}
+	
+	.no-comments {  margin: 10% 0; }
+	
+	/* pagination */
+	
+	.page-title,
+	#infinite-handle,
+	.infinite-loader { margin: 7% 0; }
+
+	.page-title {margin: 5% 4% 0;}
+}
+
+
+@media (max-width: 600px) {
+	
+	body { font-size: 16px; }
+	
+	/* format gallery */
+	
+	.flex-direction-nav { margin-top: -16px; }
+	
+	.flex-direction-nav a { 
+		height: 32px;
+		width: 32px; 
+	}
+	
+	/* post content */
+	
+	.post-content h1 { font-size: 1.5em; }
+	.post-content h2 { font-size: 1.25em; }
+	.post-content h3 { font-size: 1.1em; }
+	.post-content h4 { font-size: 1em; }
+	.post-content h5 { font-size: 0.9em; }
+	.post-content h6 { font-size: 0.7em; }
+
+	.post-content input[type="text"],
+	.post-content input[type="email"],
+	.post-content input[type="tel"],
+	.post-content input[type="url"],
+	.post-content input[type="password"],
+	.post-content textarea {
+		padding: 13px;
+		font-size: 0.8em;
+	}
+	.post-meta p {
+    		width: 95%;
+    		margin: 0 auto;
+    		line-height: 1.4;
+	}
+	/* comments */
+	
+	.comments-title,
+	.comment-reply-title { font-size: 1.4em; }
+	
+	.comments-subtitle { bottom: 36px; }
+	
+	#cancel-comment-reply-link {
+		margin-left: 3px;
+		font-size: 0.9rem;
+	}
+	
+	div.comment,
+	.comments-nav {
+		margin-top: 25px;
+		padding-top: 25px;
+	}
+	
+	.comment-inner { margin-left: 64px; }
+	
+	.comment > .avatar-container { width: 44px; }
+	
+	.comment-header { padding-top: 4px; }
+	
+	/* respond */
+	
+	.comment-reply-title { margin-bottom: 30px; }
+	
+	.comment-form p { margin-bottom: 20px; }
+	
+	.comment-form-author,
+	.comment-form-email {
+		float: none;
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	.comment-form input[type="text"], 
+	.comment-form input[type="email"], 
+	.comment-form input[type="url"], 
+	.comment-form textarea {
+		padding: 15px;
+	}
+	
+	.comment-form textarea { height: 150px; }
+	
+	.comment-form input[type="submit"] {
+		padding: 12px 16px;
+		font-size: 0.9em;
+	}
+	
+	
+}
+
+
+@media (max-width: 500px) {
+
+
+	/* sidebar */
+	
+	.sidebar {padding: 25px 0 20px 0;}
+
+	.blog-title { font-size: 1.1em; }
+
+	/* blog */
+	
+	.post-header { margin-bottom: 20px; }
+	
+	.post-title { font-size: 1.75em; }
+	
+	/* post formats */
+	
+	.post-quote blockquote,
+	.post-quote blockquote p { font-size: 1.25rem; }
+
+	/* post content */
+	
+	.post-content blockquote { padding: 25px; }
+	
+	.post-content blockquote:before { content: none; }
+	
+	.post-content .alignleft,
+	.post-content .alignright {
+		display: block;
+		max-width: 100%;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.post-content .alignleft img,
+	.post-content .alignright img {
+		display: block;
+		margin: 0 auto;
+	}
+
+
+}
+
+
+@media ( max-width: 400px ) {
+	
+	
+	/* single post */
+	
+	.post-meta-toggle { padding: 30px 4%; }
+		
+	.post-meta-date span { display: none; }
+	
+	.post-content a.more-link { padding: 12px 16px; }
+	
+	/* post content */
+	
+	.post-content p,
+	.post-content blockquote,
+	.post-content ul,
+	.post-content ol,
+	.post-content address,
+	.post-content dl,
+	.post-content .wp-caption,
+	.post-content pre {
+		line-height: 150%;
+		margin-bottom: 1.2em;
+	}
+	
+	.post-content li,
+	.post-content blockquote p { line-height: 140%; }
+
+	
+}
+
+
+@media ( max-width: 350px ) {
+	
+	
+	/* comments */
+	
+	.comment .avatar-container { display: none; }
+	
+	.comment-inner { margin-left: 0; }
+	
+	
+}
